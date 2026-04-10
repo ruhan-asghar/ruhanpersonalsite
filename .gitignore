@@ -43,3 +43,13 @@ next-env.d.ts
 # slack bot artifacts
 _slack_*
 remote_log.md
+
+# template reference
+azurio-digital-agency-and-personal-portfolio-html-template/
+
+.vercel
+
+# Claude Dev Bot — auto-generated files
+*_extracted.txt
+bot/uploads/
+sessions.json
