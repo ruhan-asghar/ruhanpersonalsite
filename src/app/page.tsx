@@ -123,11 +123,11 @@ export default function Home() {
           </a>
         </div>
         <div className="mxd-header__controls">
-          <a className="btn btn-default btn-default-small slide-right-up" href="https://calendly.com/ruhan-asghar/ruhan-builds" target="_blank">
-            <span className="btn-caption mxd-scramble">Book a Call</span>
-            <i className="btn-icon">
+          <a className="btn mxd-header__link slide-right-up" href="https://calendly.com/ruhan-asghar/ruhan-builds" target="_blank" aria-label="Say Hello">
+            <span className="btn-caption mxd-scramble">Say Hello</span>
+            <i>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-                <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
+                <path d="M18,0v14.4h-3.6v-7.2h-3.6v-3.6H3.6V0h14.4ZM7.2,10.8h3.6v-3.6h-3.6s0,3.6,0,3.6ZM3.6,14.4h3.6v-3.6h-3.6v3.6ZM0,18h3.6v-3.6H0v3.6Z"/>
               </svg>
             </i>
           </a>
@@ -159,9 +159,9 @@ export default function Home() {
                   <div className="mxd-hero-10__headline mxd-grid-item">
                     <div className="hero-10-headline__wrap">
                       <h1>
-                        <a className="hero-10-headline__content active-cursor-accent" data-cursor-text="Book a Call" href="https://calendly.com/ruhan-asghar/ruhan-builds" target="_blank">
+                        <span className="hero-10-headline__content">
                           <span className="loading-chars">Ruhan</span>
-                        </a>
+                        </span>
                       </h1>
                     </div>
                   </div>
@@ -377,7 +377,7 @@ export default function Home() {
         </div>
 
         {/* ==================== STATISTICS SECTION ==================== */}
-        <div className="mxd-section blur-section padding-top-number padding-bottom-tag-m">
+        <div className="mxd-section blur-section padding-top-number padding-bottom-tag-m section-stats">
           <div className="pinned-section__inner">
             <div className="mxd-container grid-l-container">
               <div className="mxd-block">
@@ -461,14 +461,9 @@ export default function Home() {
         {/* CTA - After Stats */}
         <div className="mxd-section blur-section" style={{ paddingTop: '4rem', paddingBottom: '4rem' }}>
           <div className="mxd-container grid-l-container">
-            <div className="mxd-block" style={{ textAlign: 'center' }}>
-              <a className="btn btn-default slide-right-up" href="https://calendly.com/ruhan-asghar/ruhan-builds" target="_blank">
+            <div className="mxd-block anim-uni-in-up" style={{ textAlign: 'center' }}>
+              <a className="btn btn-line btn-line-default slide-right-up" href="https://calendly.com/ruhan-asghar/ruhan-builds" target="_blank">
                 <span className="btn-caption mxd-scramble">Let&apos;s Build Together</span>
-                <i className="btn-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-                    <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                  </svg>
-                </i>
               </a>
             </div>
           </div>
@@ -687,8 +682,8 @@ export default function Home() {
         {/* CTA - After Expertise */}
         <div className="mxd-section blur-section" style={{ paddingTop: '4rem', paddingBottom: '4rem' }}>
           <div className="mxd-container grid-l-container">
-            <div className="mxd-block" style={{ textAlign: 'center' }}>
-              <a className="btn btn-line btn-line-default slide-right-up anim-uni-in-up" href="https://calendly.com/ruhan-asghar/ruhan-builds" target="_blank">
+            <div className="mxd-block anim-uni-in-up" style={{ textAlign: 'center' }}>
+              <a className="btn btn-line btn-line-default slide-right-up" href="https://calendly.com/ruhan-asghar/ruhan-builds" target="_blank">
                 <span className="btn-caption mxd-scramble">Book a Free Strategy Call</span>
               </a>
             </div>
@@ -1076,17 +1071,14 @@ export default function Home() {
         <div className="mxd-section blur-section" style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
           <div className="mxd-container grid-l-container">
             <div className="mxd-block" style={{ textAlign: 'center' }}>
-              <div className="anim-uni-in-up" style={{ marginBottom: '2rem' }}>
+              <div className="anim-uni-in-up" style={{ marginBottom: '2.5rem' }}>
                 <p className="t-extra t-bold mxd-split-lines">Ready to ship something real?</p>
               </div>
-              <a className="btn btn-default slide-right-up anim-uni-in-up" href="https://calendly.com/ruhan-asghar/ruhan-builds" target="_blank">
-                <span className="btn-caption mxd-scramble">Schedule a Call</span>
-                <i className="btn-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-                    <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                  </svg>
-                </i>
-              </a>
+              <div className="anim-uni-in-up">
+                <a className="btn btn-line btn-line-default slide-right-up" href="https://calendly.com/ruhan-asghar/ruhan-builds" target="_blank">
+                  <span className="btn-caption mxd-scramble">Schedule a Call</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -1126,7 +1118,7 @@ export default function Home() {
                   <div className="mxd-promo__content">
                     <div className="mxd-promo__btngroup anim-uni-in-up">
                       <a className="btn btn-line btn-line-permanent" href="https://calendly.com/ruhan-asghar/ruhan-builds" target="_blank">
-                        <span className="btn-caption mxd-scramble">Book a Call</span>
+                        <span className="btn-caption mxd-scramble">Let&apos;s Talk</span>
                       </a>
                     </div>
                     <div className="mxd-promo__caption">

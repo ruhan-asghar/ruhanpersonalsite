@@ -2938,27 +2938,43 @@ new Ukiyo(video,{
 function mxdPerspectiveList() {
   const mxdPerspectiveList = document.querySelectorAll(".mxd-perspective-list");
   if (!mxdPerspectiveList.length) return;
-  mxdPerspectiveList.forEach((list) => {
-    const items = list.querySelectorAll(".mxd-perspective-list__item");
-    items.forEach((item) => {
-      const inner = item.querySelector(".mxd-perspective-list__inner");
-      if (!inner) return;
-      gsap.set(inner, {
-        rotateX: 0,
-        opacity: 1,
-        filter: "blur(0px)",
+
+  // Only apply perspective blur on desktop — on mobile it obscures content
+  const media = gsap.matchMedia();
+  media.add("(min-width: 1200px)", () => {
+    mxdPerspectiveList.forEach((list) => {
+      const items = list.querySelectorAll(".mxd-perspective-list__item");
+      items.forEach((item) => {
+        const inner = item.querySelector(".mxd-perspective-list__inner");
+        if (!inner) return;
+        gsap.set(inner, {
+          rotateX: 0,
+          opacity: 1,
+          filter: "blur(0px)",
+        });
+        gsap.to(inner, {
+          rotateX: 30,
+          opacity: 0.3,
+          filter: "blur(4px)",
+          ease: "none",
+          scrollTrigger: {
+            trigger: item,
+            start: "5% top",
+            end: "bottom 40%",
+            scrub: 0.6,
+          },
+        });
       });
-      gsap.to(inner, {
-        rotateX: 30,
-        opacity: 0.3,
-        filter: "blur(4px)",
-        ease: "none",
-        scrollTrigger: {
-          trigger: item,
-          start: "5% top",
-          end: "bottom 40%",
-          scrub: 0.6,
-        },
+    });
+  });
+
+  // On mobile/tablet, ensure items are fully visible
+  media.add("(max-width: 1199px)", () => {
+    mxdPerspectiveList.forEach((list) => {
+      const items = list.querySelectorAll(".mxd-perspective-list__item");
+      items.forEach((item) => {
+        const inner = item.querySelector(".mxd-perspective-list__inner");
+        if (inner) gsap.set(inner, { clearProps: "all" });
       });
     });
   });

@@ -2222,16 +2222,16 @@ html.lenis, html.lenis body {
 .mxd-divider {
   position: relative;
   overflow: hidden;
-  height: 600px;
+  height: 180px;
 }
 @media only screen and (min-width: 768px) {
   .mxd-divider {
-    height: 760px;
+    height: 228px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .mxd-divider {
-    height: 760px;
+    height: 228px;
   }
   .mxd-divider.divider-hero-01 {
     padding-top: 14rem;
@@ -2239,7 +2239,7 @@ html.lenis, html.lenis body {
 }
 @media only screen and (min-width: 1600px) {
   .mxd-divider {
-    height: 930px;
+    height: 279px;
   }
 }
 
@@ -20903,4 +20903,9 @@ form textarea:required:valid {
 
 /* ------------------------------------------------*/
 /* Block - Images Grid End */
+
+/* ------------------------------------------------*/
+/* Custom Overrides */
+/* ------------------------------------------------*/
+/* removed desktop padding overrides for stats/resume */
 /* ------------------------------------------------*/
