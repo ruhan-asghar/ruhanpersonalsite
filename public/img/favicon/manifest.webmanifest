@@ -1,11 +1,14 @@
 {
-  "name": "Azurio - Digital Agency & Personal Portfolio HTML Template",
-  "short_name": "Azurio",
+  "name": "Ruhan Asghar — AI Engineer, CTO & Builder",
+  "short_name": "Ruhan Asghar",
   "icons": [
     { "src": "/img/favicon/android-icon-192.png", "type": "image/png", "sizes": "192x192" },
-    { "src": "/img/favicon/android-icon-512.png", "type": "image/png", "sizes": "512x512" }
+    { "src": "/img/favicon/android-icon-512.png", "type": "image/png", "sizes": "512x512" },
+    { "src": "/img/favicon/icon.svg", "type": "image/svg+xml", "sizes": "any" }
   ],
-  "theme_color": "#efefef",
-  "background_color": "#efefef",
-  "display": "standalone"
+  "theme_color": "#0f0f0f",
+  "background_color": "#0f0f0f",
+  "display": "standalone",
+  "start_url": "/",
+  "description": "I build AI systems that actually ship. 23+ production systems across defense, FinTech, field ops, and SaaS."
 }

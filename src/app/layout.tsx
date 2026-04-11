@@ -42,6 +42,14 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/img/favicon/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/img/favicon/apple-touch-icon.png",
+  },
+  manifest: "/img/favicon/manifest.webmanifest",
   openGraph: {
     title: "Ruhan Asghar — AI Engineer, CTO & Builder",
     description:
@@ -50,12 +58,21 @@ export const metadata: Metadata = {
     siteName: "Ruhan Asghar",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/images/og-image.webp",
+        width: 1200,
+        height: 675,
+        alt: "Ruhan Asghar — AI Engineer, CTO & Builder",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Ruhan Asghar — AI Engineer, CTO & Builder",
     description:
       "I build AI systems that actually ship. 23+ production systems across defense, FinTech, field ops, and SaaS.",
+    images: ["/images/og-image.webp"],
   },
   alternates: {
     canonical: siteUrl,
@@ -121,13 +138,6 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-
-        {/* Template Favicon */}
-        <link rel="icon" href="/img/favicon/icon.svg" type="image/svg+xml" />
-        <link
-          rel="apple-touch-icon"
-          href="/img/favicon/apple-touch-icon.png"
         />
 
         {/* Browser Theme Color */}
